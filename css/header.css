@@ -1,0 +1,231 @@
+.logo {
+    display: inline-block;
+}
+.logo-link {
+    cursor: pointer;
+}
+.header {
+    border-bottom: 1px solid #FFFFFF;
+    padding: 0 10px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    transition: all .5s;
+}
+.toolbar1 { background:  #30BCC9; }
+.toolbar2 { background:  #F6404F; }
+.toolbar3 { background:  #FFC41E; }
+
+.header__inner {
+    text-align: center;
+    align-items: center;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    display: flex;
+    justify-content: space-between;
+}
+.menu__list {
+    display: flex;
+}
+.menu__list-item {
+    margin-right: 25px;
+}
+.menu__list-item:last-child {
+    margin-right: 15px;
+}
+.menu__list-link {
+    color: #FFFFFF;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    transition: all .5s;
+}
+.menu__list-link:hover {
+    border-bottom: 1px solid #FFFFFF;
+}
+.header__search {
+    display: flex;
+    position: relative;
+}
+.search__box {
+    border-radius: 3px;
+    position: relative;
+    align-items:center;
+    transition: all .5s;
+}
+.header__input {
+    height: 100%;
+    padding-right: 20px;   
+}
+.header__button {
+    left: 1px;
+    padding: 20px;
+    position: relative;
+}
+.header__button::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 2px;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/Search.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.menu-burger {
+    display: none;
+}
+.burger__inner {
+    align-items: center;
+    position: relative;
+    width: 33px;
+    height: 35px;
+    display: none;
+}
+.burger__inner span, .burger__inner::after, .burger__inner::before{
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background-color: #fff;
+    margin: 0 auto; 
+}
+.burger__inner span {
+    z-index: 100;
+    top: 20px;
+}
+.burger__inner::after, .burger__inner::before{
+    content: '';
+    z-index: 100;
+}
+.burger__inner::after {
+    bottom: 1px;
+}
+.burger__inner::before {
+    top: 8px;
+}
+.burger {
+    position: relative;
+}
+.burger__button{
+    z-index: 2;
+    position: absolute;
+    width: 33px;
+    height: 35px;
+    cursor: pointer;
+    top: -18px;
+    left: 0;
+}
+
+@media (max-width: 953px) {
+    .header__input{
+        display: none;
+        height: 40px;
+    }
+    .header__button {
+        right: 10px;
+    }
+    .header__button::after {
+        top: 0;
+        right: 0;
+    }
+    .search__box {
+        margin-top: 40px;
+        position: absolute;
+        top: -60px;
+        right: 25px;
+        display: flex;
+    }
+    .search__box:hover {
+        padding: 0;
+    }
+    .search__box:hover > .header__input {
+        display: flex;
+    }
+    .menu__list-item {
+        margin-right: 40px;
+    }
+    .menu__list-item:last-child {
+        margin-right: 20px;
+    }
+}
+@media (max-width: 875px) {
+    .search__box {
+        right: 5px;
+    }
+}
+@media (max-width:845px) {
+    .header__button {
+        right: 0;
+    }
+    .menu__list-item:last-child {
+        margin-right: 10px;
+    }
+}
+@media (max-width: 834px) {
+    .search__box {
+        right: -7px;
+    }
+    .menu__list-item {
+        margin-right: 30px;
+    }
+}
+@media (max-width:763px) {
+    .logo {
+        max-width: 100px
+    }
+    .menu__list-item {
+        margin-right: 25px;
+    }
+}
+@media (max-width: 646px) {
+    .burger__inner {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+    .dropdown > .menu-burger {
+        align-items:center;
+        justify-content: center;
+        font-size: 28px;
+        z-index: 50;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: -33px;
+        left: -600px;
+        background-color: #73afba;
+        height: 100vh;
+        width: 700px;
+        margin: 0 auto;
+    } 
+    .burger__list-item:first-child {
+        padding-top: 10vh;
+    }
+    .burger__list-item {
+        padding-bottom: 8vh;
+        letter-spacing: 3px;
+    }
+    .dropdown:hover {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .header__inner {
+        text-align:justify;
+    }
+    .search__box {
+        right: 50px;
+        top: -39px;
+    }
+}
+@media (max-width:410px) {
+    .dropdown > .menu-burger {
+        padding-left: 53vw;
+    }
+}
+@media (max-width: 439px) {
+    .search__box:hover > .header__input {
+        width: 220px;
+    }
+}
